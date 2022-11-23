@@ -1,11 +1,8 @@
 //Import necessary libraries
-import javax.sql.rowset.serial.SQLOutputImpl;
-import java.sql.SQLOutput;
 import java.util.Scanner;  // Import the Scanner class
 
 public class Main {
     public static void main(String[] args) {
-
 
     String username = "user";
     String password = "password";
@@ -15,12 +12,13 @@ public class Main {
 
     while (attempts>0) {
         System.out.println("Please enter username");
-        String usernameInput = myObj.nextLine();
+        String usernameInput = myObj.nextLine().toLowerCase();
         System.out.println(usernameInput);
 
         System.out.println("Please insert password");
-        String passwordInput = myObj.nextLine();
+        String passwordInput = myObj.nextLine().toLowerCase();
         System.out.println(passwordInput);
+        //using toLowerCase so case sensitivity does not matter.
 
         if (username.equals(usernameInput) && password.equals(passwordInput)) {
             System.out.println("Login Successful");
