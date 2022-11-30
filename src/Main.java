@@ -24,14 +24,14 @@ public class Main {
             System.out.println("Login Successful");
             attempts=0;
         } else if (!username.equals(usernameInput) && !password.equals(passwordInput)) {
-            System.out.println("Both Username and Password incorrect,you have " + attempts + " attempts left.");
             attempts = attempts-1;
-        } else if (!username.equals(usernameInput)) {
             System.out.println("Username incorrect,you have " + attempts + " attempts left.");
+        } else if (!username.equals(usernameInput)) {
             attempts = attempts-1;
+            System.out.println("Username incorrect,you have " + attempts + " attempts left.");
         } else if (!password.equals(passwordInput)) {
-            System.out.println("Password incorrect,you have " + attempts + " attempts left.");
             attempts = attempts-1;
+            System.out.println("Username incorrect,you have " + attempts + " attempts left.");
         }
     }
 }
